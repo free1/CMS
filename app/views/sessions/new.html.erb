@@ -1,0 +1,19 @@
+<h1>登录</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+    </br>
+      <%= f.submit "登录", class: "btn btn-large btn-primary" %>
+    <% end %>
+
+    <p>没有帐号？ <%= link_to "立即注册", signup_path %></p>
+  </div>
+</div>
