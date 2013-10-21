@@ -8,6 +8,9 @@ gem 'rails', '3.2.13'
 # 页面样式
 gem 'bootstrap-sass', '2.3.2.0'
 
+# 安全密码
+gem 'bcrypt-ruby', '3.0.1'
+
 gem 'sqlite3'
 
 

@@ -1,6 +1,9 @@
 CMS::Application.routes.draw do
   resources :posts
-
+  resources :users
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   root :to => 'static_pages#home'
 
