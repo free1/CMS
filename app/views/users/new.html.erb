@@ -1,0 +1,25 @@
+<h1>注册</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+
+      <%= f.label :name, "用户名" %>
+      <%= f.text_field :name %>
+
+      <%= f.label :password, "密码" %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "确认密码" %>
+      <%= f.password_field :password_confirmation %>
+
+    </br>
+      <%= f.radio_button(:role, "member") %>
+      <%= label_tag(:role, "会员") %>
+      <%= f.radio_button(:role, "admin") %>
+      <%= label_tag(:role, "管理员") %>
+    </br>
+      <%= f.submit "注册", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
