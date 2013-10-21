@@ -5,6 +5,9 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# 页面样式
+gem 'bootstrap-sass', '2.3.2.0'
+
 gem 'sqlite3'
 
 
