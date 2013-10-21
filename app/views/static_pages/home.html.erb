@@ -1,4 +1,10 @@
-<% @posts.each do |post| %>
-	<%= link_to post.title, post %>  </br>
-	<%= post.content %>
+<% if signed_in? %>
+	<% @posts.each do |post| %>
+		<%= link_to post.title, post %> </br>
+		<%= post.content %>
+	<% end %>
+<% else %>
+	<h1>登陆后才可以浏览文章哟！</h1>
+	<p><%= link_to "登录",    signin_path %></p>
+	<p>没有帐号？ <%= link_to "立即注册", signup_path %></p>
 <% end %>
