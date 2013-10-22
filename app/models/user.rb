@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   before_save { self.name = name.downcase }
 
   # 安全密码
-  has_secure_password
+  has_secure_password 
 
   validates :name, presence: true, length: { maximum: 20 }, uniqueness: true
   validates :role, presence: true, inclusion: %w(member admin)
