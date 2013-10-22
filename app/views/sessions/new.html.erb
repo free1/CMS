@@ -4,10 +4,10 @@
   <div class="span6 offset3">
     <%= form_for(:session, url: sessions_path) do |f| %>
 
-      <%= f.label :name %>
+      <%= f.label :name, "用户名" %>
       <%= f.text_field :name %>
 
-      <%= f.label :password %>
+      <%= f.label :password, "密码" %>
       <%= f.password_field :password %>
 
     </br>
